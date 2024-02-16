@@ -1,0 +1,151 @@
+<h2>Schritt 1: Wie viele Spieler:innen seid ihr heute?</h2>
+
+<div class="formfield" style="display: flex; flex-wrap: wrap;">
+    <div class="choiceButton"> 10</div>
+    <div class="choiceButton"> 11</div>
+    <div class="choiceButton"> 14</div>
+    <div class="choiceButton"> 15</div>
+    <div class="choiceButton"> 19</div>
+    <div class="choiceButton"> 20</div>
+    <div class="choiceButton"> 24</div>
+    <div class="choiceButton"> 25</div>
+</div>
+
+
+<div class="formfield" style="display:none;">
+
+    <label class="col-form-label" for="id_numPlayers">Wie viele Spieler:innen seid ihr?</label>
+
+
+
+
+    <div class="controls">
+        <table style="padding-left:0; width:200px;">
+            <tr>
+                <td style="padding-left:0;"> <input type="number" class="form-control" inputmode="numeric"
+                        id="id_numPlayers" max="25" min="10" name="numPlayers" required="" value=""
+                        onchange="initInfo(this.value, renderGame1)"> </td>
+                <td style="padding-left:0pt;"> </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="tableAnfangsverteilung" style="display:none; margin-top:30px;">
+   <p><b> So ist das Startkapital der Spieler:innen. Bitte verteile die richtige Anzahl Münzen und YOLOs mit dem Heft einzeln.  </b> </p> 
+    
+    <table class="Anfangsverteilung" style="width: 105%; ">
+        <tbody>
+            <tr>
+                <td style="width: 80px;">Spieler:in</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Anzahl YOLOs</td>
+                <td>5</td>
+                <td>4</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>5</td>
+                <td>4</td>
+                <td>4</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>4</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>4</td>
+                <td>4</td>
+                <td>4</td>
+                <td>2</td>
+                <td>2</td>
+                <td>4</td>
+                <td>2</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Anzahl M&uuml;nzen</td>
+                <td>16</td>
+                <td>6</td>
+                <td>5</td>
+                <td>2</td>
+                <td>1</td>
+                <td>17</td>
+                <td>7</td>
+                <td>5</td>
+                <td>4</td>
+                <td>3</td>
+                <td>6</td>
+                <td>15</td>
+                <td>4</td>
+                <td>3</td>
+                <td>4</td>
+                <td>16</td>
+                <td>6</td>
+                <td>6</td>
+                <td>2</td>
+                <td>2</td>
+                <td>14</td>
+                <td>6</td>
+                <td>3</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="beforeStart" style="display:none;">
+    <p style="font-weight: bold;"> So verteilen sich die Spieler:innen auf den Globalen Norden und den Globalen Süden.</p>
+
+    <p> <span id="num_players_south"></span> Spieler:innen sind im Globalen Süden und <span
+            id="num_players_north"></span> Spieler:innen sind im Globalen Norden.</p>
+
+
+
+ <div>
+
+ <button style="font-size: x-large; margin-left: auto; margin-right: auto; display: block;" id="startRound1" class="button" onClick="klimaspiel.round(1)">Starte mit Runde 1 </button>
+
+</div>
+</div>
+
+
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".choiceButton").click(function () { setNumberPlayers(this) })
+    })
+
+</script>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<link href="static/global/css/general.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Fira Sans' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+<!-- <link href="static/global/css/timer.css" rel="stylesheet"> -->
+
+<body>
+
+    <div class="header"
+        style="position:absolute; top:0;     left: 0;  min-height:80px; width:100%; background-color: #DADCDE;">
+
+        <table style="width: 80%; margin-left: auto;   margin-right: auto; ">
+            <tr>
+                <td>
+                    <div style="cursor: pointer;" onclick="klimaspiel.restart()"> Klimaspiel neu starten <span
+                            style="font-size:x-large; font-weight:bold"> &#8635;</span> </div>
+                </td>
+                <td> <button onclick="klimaspiel.migrate()" class="button" id="migratebutton" style="display:none;"> Option Auswandern erfassen
+                    </button>
+                </td>
+                <td>
+                    <div style="text-align: right; " id="playintro"> <button class="button"> <span
+                                style="font-size: x-large;">&#x1F4F9; </span>
+                            Intro Video </button></div>
+                </td>
+            </tr>
+
+        </table>
+
+
+
+
+    </div>
+
+
+<footer>
+    <div class="footer"
+        style=" background-color: #DADCDE; width:100%; left:0; position:fixed; bottom:0; min-height:50px; ">
+
+        <table style=" margin-left: auto;   width:90%;   border-spacing: 100px 0px; margin-right: auto; margin-top: 10px;">
+            <tr>
+              
+                <td>  <img src="/static/global/img/logo.png" style="width:200px"> 
+                </td> 
+                <td style="text-align: right;"> 
+                    <span style="font-size: large; "> &copy; Zahra Rahmani Azad 2024 </span>
+                </td>
+            </tr>
+
+        </table>
+    </footer>
+
+
+
+
+    </div>
+
+
+    <div class="standard">
+        <h1> Klimakostenrechner zum Planspiel</h1>
+
+        <div class="content">
+        </div>
+
+    </div>
+
+
+
+    <div class="white-screen-overlay" id="whiteScreenOverlay"> </div>
+    <div class="block-instruction-card" id="blockInstructionCard" style="display: none;">
+        <div class="card-content">
+            <h3> Willkommen zum Klimakostenrechner zum Planspiel</h3>
+
+            Hier kommen die Instruktionen mit einem Video.
+
+            <iframe style="width: 600px; height: 400px;" src="https://youtube.com/embed?v=sTvqIijqvTg"
+                title="Willkommen zum Planspiel"></iframe>
+
+            <div id="hideInstructionButton" class="button getstarted">Los geht's</div>
+
+        </div>
+    </div>
+
+    <div class="block-instruction-card" id="blockmigrate" style="display: none;">
+        <div class="card-content">
+
+            <table style="width:80%">
+                <tr>
+                    <td> Anzahl Spieler:innen Norden </td>
+                    <td> </td>
+                    <td> Anzahl Spieler:innen Süden </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" id="anzahlNorden"> test </td> 
+                    <td style="font-size: xx-large; font-weight: bold; cursor:pointer" onclick="klimaspiel.increaseSouth()"> &rarr; </td>
+                    <td rowspan=2 id="anzahlSueden" style="text-align: right;"> 43</td>
+
+                </tr>
+                <tr>
+                    <td style="font-size: xx-large; font-weight: bold; cursor:pointer;" onclick="klimaspiel.increaseNorth()"> &larr;</td>
+                </tr>
+            </table>
+
+            <div id="hideInstructionButton" class="button"  onclick="klimaspiel.saveMigrate()"> Fertig </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.js"> </script>
+<!-- <script src="static/global/js/timer.js"></script> -->
+
+<script src="static/global/js/klimaspiel.js"></script>
+
+
+<script>
+
+
+    initInfo = function (value, callback) {
+        $.getJSON("planspielTableA.json", function (json) {
+            tableA = json[value][0];
+        })
+            .then(() => callback(tableA));
+    }
+
+    renderGamenever = function (mytable) {
+
+        $('#num_players_south').html(mytable.numPlayer_south)
+
+        $('#num_players_north').html(mytable.numPlayer_north)
+
+        $('#num_yolos').html(mytable.yolos_start)
+
+        $('#climate_cost_south').html(mytable.cost_after_r4_south)
+
+        $('#climate_cost_north').html(mytable.cost_after_r4_north)
+        $('#increase_after_round_south').html(mytable.increase_after_yolos_south)
+
+        $('#increase_after_round_north').html(mytable.increase_after_yolos_north)
+    }
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,110 @@
+{
+    "10": [
+        {
+            "numPlayer": 10,
+            "numPlayer_north": 5, 
+            "numPlayer_south": 5, 
+            "yolos_start": 27, 
+            "cost_after_r4_north": 2,
+            "increase_after_yolos_north": 5,
+            "cost_after_r4_south": 4,
+            "increase_after_yolos_south": 3
+        }
+    ],
+
+    "11": [{
+            "numPlayer": 11,
+            "numPlayer_north": 5, 
+            "numPlayer_south": 6, 
+            "yolos_start": 29, 
+            "cost_after_r4_north": 2,
+            "increase_after_yolos_north": 5,
+            "cost_after_r4_south": 4,
+            "increase_after_yolos_south": 3
+        }
+    ],
+
+    "14": [
+
+        {
+            "numPlayer": 14,
+            "numPlayer_north": 5, 
+            "numPlayer_south": 9, 
+            "yolos_start": 24, 
+            "cost_after_r4_north": 4,
+            "increase_after_yolos_north": 7,
+            "cost_after_r4_south": 7,
+            "increase_after_yolos_south": 4
+        }
+    ],
+
+    "15": [
+
+        {
+            "numPlayer": 15,
+            "numPlayer_north": 5, 
+            "numPlayer_south": 10, 
+            "yolos_start": 24, 
+            "cost_after_r4_north": 4,
+            "increase_after_yolos_north": 7,
+            "cost_after_r4_south": 8,
+            "increase_after_yolos_south": 4
+        }
+    ],
+
+    "19": [
+
+        {
+            "numPlayer": 19,
+            "numPlayer_north": 9, 
+            "numPlayer_south": 10, 
+            "yolos_start": 48, 
+            "cost_after_r4_north": 4,
+            "increase_after_yolos_north": 7,
+            "cost_after_r4_south": 7,
+            "increase_after_yolos_south": 4
+        }
+    ],
+
+    "20": [
+        {
+            "numPlayer": 20,
+            "numPlayer_north": 10, 
+            "numPlayer_south": 10, 
+            "yolos_start": 50, 
+            "cost_after_r4_north": 3,
+            "increase_after_yolos_north": 7,
+            "cost_after_r4_south": 6,
+            "increase_after_yolos_south": 4
+        }
+    ],
+
+    "24": [
+
+        {
+            "numPlayer": 24,
+            "numPlayer_north": 10, 
+            "numPlayer_south": 14, 
+            "yolos_start": 57, 
+            "cost_after_r4_north": 5,
+            "increase_after_yolos_north": 9,
+            "cost_after_r4_south": 11,
+            "increase_after_yolos_south": 4
+        }
+    ],
+
+    "25": [
+
+        {
+            "numPlayer": 25,
+            "numPlayer_north": 10, 
+            "numPlayer_south": 15, 
+            "yolos_start": 57, 
+            "cost_after_r4_north": 5,
+            "increase_after_yolos_north": 9,
+            "cost_after_r4_south": 12,
+            "increase_after_yolos_south": 4
+        }
+
+    ]
+}
