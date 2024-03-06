@@ -12,12 +12,7 @@ $(document).ready(function () {
     // $("#blockmigrate").fadeOut();
     // $("#blockInstructionCard").fadeOut();}})
     
-
-
-
 })
-
-
 
 var klimaspiel = {
     currPage: 0,
@@ -42,15 +37,22 @@ var klimaspiel = {
         $(".content").hide().load("round.html", function () {
             $(".round_num").html(klimaspiel.roundnum)
             $(".round_num_plus").html(klimaspiel.roundnum + 1)
-            if (klimaspiel.roundnum >= 1 && klimaspiel.roundnum < 4) {
+            if (klimaspiel.roundnum == 1 || klimaspiel.roundnum ==3) {
                 $(".Anmoderation").css("display", "revert")
                 $(".year").html(klimaspiel.year[klimaspiel.roundnum - 1])
-                $(".num_yolos").html(klimaspiel.yolosRound[klimaspiel.roundnum - 1])
+                $(".num_yolos").html(klimaspiel.yolosRound[klimaspiel.roundnum - 2])
+            }
+            if (klimaspiel.roundnum == 1) {
+                $("#num_eingeklebte_yolos").css("display", "none")
+            }
+            if (klimaspiel.roundnum == 2) {
+                $(".Anmoderation_second").css("display", "revert")
+                $(".year").html(klimaspiel.year[klimaspiel.roundnum - 1])
             }
             if (klimaspiel.roundnum == 4) {
                 $(".Anmoderation_lvl2").css("display", "revert")
                 $(".year").html(klimaspiel.year[klimaspiel.roundnum - 1])
-                $(".num_yolos").html(klimaspiel.yolosRound[klimaspiel.roundnum - 1])
+                $(".num_yolos").html(klimaspiel.yolosRound[klimaspiel.roundnum - 2])
                 $(".klimakostenSued").html(klimaspiel.klimakostenSued)
                 $(".klimakostenNord").html(klimaspiel.klimakostenNord)
                 $(".only_round_4").css("display", "revert")
