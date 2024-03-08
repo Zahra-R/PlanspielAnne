@@ -16,18 +16,15 @@
 
 
 <div class="Anmoderation_lvl2" style="display:none;"> 
-    Die zweite Spielphase („Level 2“) beginnt mit dem YOLO-Ranking nach dem Spieljahr 2030. Sie besteht aus 5 Runden: den Spieljahren 2040 bis 2080.
+    <!-- Die zweite Spielphase („Level 2“) beginnt mit dem YOLO-Ranking nach dem Spieljahr 2030. Sie besteht aus 5 Runden: den Spieljahren 2040 bis 2080. -->
 
-    <br><br>
-
-    Es ist das Jahr <span style="font-size:x-large; font-weight:bold" class="year"></span>. Ihr habt in den letzten 10 Jahren <span style="font-size:x-large; font-weight:bold" class="num_yolos"></span>  weitere YOLOs eingeklebt. Die vielen YOLOs haben die Erde und die Atmosphäre verändert. Das Klima ändert sich. Es gibt nun viele Überschwemmungen, starke Stürme und Dürren. Dadurch wird das Leben teurer und gefährlicher. Ihr müsst zusätzliche Münzen zahlen, um eure Familien zu versorgen. Die ärmere Bevölkerung ist besonders hart betroffen.
+    Es ist das Jahr <span style="font-size:x-large; font-weight:bold" class="year"></span>. Ihr habt in den letzten 10 Jahren <span style="font-size:x-large; font-weight:bold" class="num_yolos"></span>  weitere YOLOs eingeklebt. Die vielen YOLOs haben die Erde und die Atmosphäre verändert. Das Klima verschlechtert sich. Es gibt nun viele Überschwemmungen, starke Stürme und Dürren. Dadurch wird das Leben teurer und gefährlicher. Ihr müsst zusätzliche Münzen zahlen, um eure Familien zu versorgen. Die ärmere Bevölkerung ist besonders hart betroffen.
     <br><br>
     Spielleitung zum Globalen Süden: „Die Klimaveränderung führt im Globalen Süden zu sozialer Ungleichheit. Die Spielleitung sammelt nun von den hintersten <span style="font-size:x-large; font-weight:bold" class="klimakostenSued"></span> Personen des Globalen Südens eine zusätzliche Münze ein, also jeweils 2 Münzen.“
     <br><br>
     Spielleitung zum Globalen Norden: „Ereigniskarten führen auch im Globalen Norden zu mehr Ungleichheit. Die Spielleitung sammelt von den hintersten  <span style="font-size:x-large; font-weight:bold" class="klimakostenNord"></span> Personen des Globalen Nordens eine zusätzliche Münze ein, also jeweils 2 Münzen.“
 
-    <div class="only_round_4" style="display:none;">
-    <br><br>
+    <div class="only_round_4" style="display:none;"> <br>
     An alle Spieler:innen: „Es gibt außerdem zwei neue Aktionen. Ihr dürft jetzt die Seiten 5 und 6 anschauen. Dort sind die Aktionen erklärt.“
 </div>  
 </div>
@@ -67,7 +64,9 @@
 
 <div class="formfield" style="margin-top:30px;" >
 
-    <label class="col-form-label" for="id_numPlayers">Wie viele YOLOs habt ihr in Runde <span style="font-size:x-large; font-weight:bold" class="round_num"></span> eingeklebt?</label>
+    <h4>Runde <span style="font-size:x-large; font-weight:bold" class="round_num_plus"></span> </h4>
+
+    <label class="col-form-label" for="id_numPlayers">Wie viele YOLOs wurden insgesamt eingeklebt? (Eingeklebte YOLOs = (ausgeteilte YOLOs + verkaufte YOLOs) – angekaufte YOLOS.)    </label>
 
     <div class="controls">
         <table style="padding-left:0; width:200px;">
@@ -81,7 +80,7 @@
     </div>
 </div>
 
-<button style="font-size: x-large; margin-left: auto; margin-right: auto; display: block;" id="startRound1" class="button" onClick="klimaspiel.round()">Starte mit Runde <span style="font-size:x-large; font-weight:bold" class="round_num_plus"></span></button>
+<button style="font-size: x-large; margin-left: auto; margin-right: auto; display: block;" id="startRound1" class="button" onClick="klimaspiel.round()">Weiter mit Runde <span style="font-size:x-large; font-weight:bold" class="round_num_plus"></span></button>
 
 
 </div>
